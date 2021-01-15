@@ -3,7 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  font-family: 'Nanum Pen Script', cursive;
+  background-color: #bfdbf9;
+}
 .contenitore {
   width: 60%;
   margin: auto;
@@ -11,19 +14,91 @@
 
 header , footer {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 10px;
 }
+h1{
+  font-size: 90px;
+  color: white;
+  text-shadow: 1px 1px grey;
+}
+
 main{
   margin-top: 20px;
 }
 .riga {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 
 }
-.riga div {
+.riga  > div{
   display: inline-block;
   margin: 0 10px;
   width: calc(100% / 4 - 40px);
   height: 200px;
-  border: 1px solid black;
+  border-radius: 10px;
+  background-image: url(../img/pattern.png);
+  background-size: contain;
+  background-repeat: repeat;
+  position: relative;
+  box-shadow: 3px 3px 5px grey;
+
+}
+
+.carta , .scoperta{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background-color: white;
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  box-shadow: 3px 3px 5px grey;
+}
+.carta {
+  display: none;
+}
+.bicycle{
+  background-image: url(../img/noun_Bicycle_3134821.png);
+}
+.submarine{
+  background-image: url(../img/noun_Submarine_3134738.png);
+}
+.air_balloon{
+  background-image: url(../img/noun_air_balloon_3134741.png);
+}
+.ship{
+  background-image: url(../img/noun_Cruise_Ship_3134824.png);
+}
+.tractor{
+  background-image: url(../img/noun_Tractor_3134797.png);
+}
+.tram{
+  background-image: url(../img/noun_Tram_3134750.png);
+}
+
+.carta p , .scoperta p{
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  color: #d6106b;
+  font-family: 'Cute Font', cursive;
+  font-size: 35px;
+  text-shadow: 1px 1px grey;
+}
+
+.riga > div:hover .carta{
+  display: inline-block;
+}
+
+.scoperta:hover p{
+  color: violet;
+}
+
+/* Se premi sulla carta diventa verde  */
+.riga > div:active .carta , .riga > div:active .scoperta{
+  background-color: #b0e8c7;
+}
+
+footer h4{
+  font-size: 30px;
 }

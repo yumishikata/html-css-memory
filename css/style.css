@@ -78,8 +78,10 @@ main{
 
 .carta p , .scoperta p{
   position: absolute;
+  width: 100%;
   bottom: 0;
-  left: 20%;
+  left: 0;
+  text-align: center;
   color: #d6106b;
   font-family: 'Cute Font', cursive;
   font-size: 35px;
